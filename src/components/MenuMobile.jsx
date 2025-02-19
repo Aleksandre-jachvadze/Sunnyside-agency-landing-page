@@ -1,14 +1,15 @@
 import React from 'react';
-import '../styles/menumobile.css';
+import '../styles/menu-mobile.css';
 
 export default function MenuMobile() {
   const menuItems = ['About', 'Services', 'Projects', 'Contact'];
 
   return (
-    <div className="menu_mobile">
+    <nav className="menu-mobile">
       {menuItems.map((item) => (
-        <a key={item} href="#">{item}</a>
+        <a key={item} href="#" onClick={(e) => e.preventDefault()}>{item}</a>
       ))}
-    </div>
+    </nav>
   );
 }
+
